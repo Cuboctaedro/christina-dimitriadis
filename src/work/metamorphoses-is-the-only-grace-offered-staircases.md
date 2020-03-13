@@ -1,7 +1,7 @@
 ---
 title: Metamorphoses is the only Grace offered (Staircases)
 place: Greece
-date: '2011'
+year: '2011'
 medium: Inkjet Prints
 size: Various
 layout: work
