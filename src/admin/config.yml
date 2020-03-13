@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
+
+publish_mode: editorial_workflow
+
+media_folder: "src/images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "images" # The src attribute for uploaded media will begin with /images/uploads
+collections:
+  - name: "work" # Used in routes, e.g., /admin/collections/blog
+    label: "Work" # Used in the UI
+    folder: "src/work" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    filter: {field: "layout", value: "work"}
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Place", name: "place", widget: "string"}
+      - {label: "Date", name: "date", widget: "string"}
+      - {label: "Medium", name: "medium", widget: "string"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "work"}
+      - {label: "Cover", name: "cover", widget: "image", media_library:{config:{multiple: false}}, required: false}
+      - {label: "Gallery", name: "gallery", widget: "list", field:{label: "Image", name: "image", widget: "image", media_library:{config:{multiple: false}}}}
+      - {label: "Description", name: "description", widget: "text", required: false}
+  - name: "texts" # Used in routes, e.g., /admin/collections/blog
+    label: "Texts" # Used in the UI
+    folder: "src/texts" # The path to the folder where the documents are stored
+    filter: {field: "layout", value: "texts"}
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "texts"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "texts"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
+          - {label: "Cover", name: "cover", widget: "image", media_library:{config:{multiple: false}}, required: false}
+          - {label: "Description", name: "description", widget: "text", required: false}
+      - label: "Bio Page"
+        name: "bio"
+        file: "src/bio.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "bio"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Description", name: "description", widget: "text", required: false}
+      - label: "Contact"
+        name: "contact"
+        file: "src/contact.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "contact"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Description", name: "description", widget: "text", required: false}
