@@ -1,49 +1,31 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss/base";
 
-a {
-	@apply text-ws-blue-500 underline;
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+.unseen {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
-.rocket {
-	animation: rocket 0.7s linear infinite both;
-}
-
-@keyframes rocket {
-	0% {
-		transform: translate(0);
-		transform: rotate(0);
+.project {
+	width: 100%;
+	&__pic {
+		opacity: 0;
+		transition: opacity 300ms ease-in-out;
 	}
-	10% {
-		transform: translate(-1px, -1px);
-	}
-	20% {
-		transform: translate(1px, -1px);
-	}
-	30% {
-		transform: translate(-1px, 1px);
-	}
-	40% {
-		transform: translate(1px, 1px);
-	}
-	50% {
-		transform: translate(-1px, -1px);
-	}
-	60% {
-		transform: translate(1px, -1px);
-	}
-	70% {
-		transform: translate(-1px, 1px);
-	}
-	80% {
-		transform: translate(-2px, -2px);
-	}
-	90% {
-		transform: translate(2px, -2px);
-	}
-	100% {
-		transform: translate(0);
+	&:hover .project__pic {
+		opacity: 1;
 	}
 }
 
-@tailwind utilities;
+.generated {
+	p {
+		margin-bottom: 1.5rem;
+	}
+}

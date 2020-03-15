@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% include "head.njk" %}
-    {% if env == 'production' %}
-      <!-- capture the CSS content as a Liquid variable -->
-      {% set css %}{% include "app.compiled.css" %}{% endset %}
-      <style> 
-        {{ css | safe }}
-      </style>
-    {% else %}
-    <link rel="stylesheet" href="/static/app.compiled.css">
-    {% endif %}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <head>
+        {% include "head.njk" %}
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    {{ content | safe }}
-  </body>
-  <script src="/static/app.bundled.js"></script>
+        {% if env == 'production' %}
+            <!-- capture the CSS content as a Liquid variable -->
+            {% set css %}{% include "app.compiled.css" %}{% endset %}
+            <style>
+                {{css | safe}}
+            </style>
+        {% else %}
+            <link rel="stylesheet" href="/static/app.compiled.css">
+        {% endif %}
+        {% if layout == 'home' %}
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {% endif %}
+    </head>
+    <body>
+        {% include "header.njk" %}
+        {% block content %}{% endblock %}
+    </body>
+    <script src="/static/app.bundled.js"></script>
 </html>

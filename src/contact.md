@@ -32,15 +32,7 @@ Website by : www.cuboctaedro.eu
 
 ————————————————————————————————————-
 
-Under the protection of German copyright laws, all photographs
-
-on this site are international property of Christina Dimitriadis.
-
-Neither the photographs nor any other content of this site may be used,
-
-reproduced, duplicated, copied, sold, as a whole or in part,
-
-for any purpose without a written permission from Christina Dimitriadis.
+Under the protection of German copyright laws, all photographs on this site are international property of Christina Dimitriadis. Neither the photographs nor any other content of this site may be used, reproduced, duplicated, copied, sold, as a whole or in part, for any purpose without a written permission from Christina Dimitriadis.
 
 ————————————————————————————————————-
 
