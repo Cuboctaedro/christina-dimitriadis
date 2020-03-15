@@ -4,12 +4,11 @@
 
 #  This file can be accessed using: {{ site.title }}
 
-title: "Web Starter" # Appears after the title Page eg. Title - Web Starter
-description: "Minimal boilerplate for new projects built with Eleventy, Tailwind, PurgeCSS and PostCSS" 
-url: "https://webstarter.chriscollins.me"
+title: "Christina Dimitriadis" # Appears after the title Page eg. Title - Web Starter
+description: "Website of photographer Christina Dimitriadis" 
+url: "https://christinadimitriadis.com"
 
-author: "Chris Collins"
+author: "Christina Dimitriadis"
 meta_data: 
- twitter: "@scottishstoater"
- default_social_image: "/static/default_social_image.jpg"
+ default_social_image: "/images/island-hoping-1.jpg"
 
