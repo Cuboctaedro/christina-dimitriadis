@@ -6,6 +6,7 @@ medium: Inkjet Prints
 size: Various
 layout: work
 tags: work
+order: 180
 cover: images/tsantalina-mantalina-01.jpg
 gallery:
   - images/tsantalina-mantalina-01.jpg

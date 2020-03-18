@@ -6,6 +6,7 @@ medium: Inkjet Prints
 size: Various
 layout: work
 tags: work
+order: 170
 cover: images/staircases-01.jpg
 gallery:
   - images/staircases-01.jpg

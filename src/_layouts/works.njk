@@ -3,7 +3,7 @@
 {% block content %}
     <main class="container mx-auto px-3 mt-12">
         <ul class=" w-full relative">
-            {% for item in collections.work %}
+            {% for item in collections.workSorted %}
                 <li class="mb-6 w-full">
                     <a class="project text-gray-600 hover:text-black no-underline " href="{{ item.url }}">
                         <h2 class="uppercase font-bold xl:w-2/3">{{ item.data.title }}</h2>

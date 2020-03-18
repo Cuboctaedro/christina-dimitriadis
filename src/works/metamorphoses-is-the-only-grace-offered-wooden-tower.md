@@ -6,6 +6,7 @@ medium: Inkjet Prints
 size: Various
 layout: work
 tags: work
+order: 160
 cover: images/tower-01.jpg
 gallery:
   - images/tower-01.jpg

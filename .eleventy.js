@@ -45,6 +45,12 @@ module.exports = function (eleventyConfig) {
     // This allows Eleventy to watch for file changes during local development.
     eleventyConfig.setUseGitIgnore(false);
 
+    eleventyConfig.addCollection("workSorted", function(collection) {
+        return collection.getFilteredByTag("work").sort(function(a, b) {
+            return b.data.order - a.data.order;
+        });
+    });
+
     return {
         dir: {
             input: "src/",

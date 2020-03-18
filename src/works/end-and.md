@@ -6,6 +6,7 @@ medium: Inkjet Prints
 size: 60 x 40 cm
 layout: work
 tags: work
+order: 190
 cover: images/end-and-01.jpg
 gallery:
   - images/end-and-01.jpg
