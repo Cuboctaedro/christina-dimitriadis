@@ -4,11 +4,14 @@ const {
 const htmlmin = require("html-minifier");
 const yaml = require("js-yaml");
 
+const galleryData = require("./filters/gallerydata");
+
 module.exports = function (eleventyConfig) {
     // Folders to copy to build dir (See. 1.1)
     eleventyConfig.addPassthroughCopy("src/static");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/images");
+    eleventyConfig.addPassthroughCopy("src/photoswipe");
 
     if (process.env.ELEVENTY_ENV === 'production') {
         // Minify HTML (including inlined CSS and JS) 
@@ -33,6 +36,8 @@ module.exports = function (eleventyConfig) {
             zone: 'utc'
         }).toFormat('yyyy-LL-dd');
     });
+
+    eleventyConfig.addFilter("galleryData", galleryData);
 
     // Add YAML support for data files
     eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));

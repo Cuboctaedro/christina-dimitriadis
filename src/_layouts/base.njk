@@ -13,13 +13,12 @@
         {% else %}
             <link rel="stylesheet" href="/static/app.compiled.css">
         {% endif %}
-        {% if layout == 'home' %}
-            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        {% endif %}
+        {% block header %}{% endblock %}
     </head>
     <body>
         {% include "header.njk" %}
         {% block content %}{% endblock %}
     </body>
+    {% block footer %}{% endblock %}
     <script src="/static/app.bundled.js"></script>
 </html>

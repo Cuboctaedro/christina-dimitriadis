@@ -30,14 +30,14 @@ collections:
   - name: "texts" # Used in routes, e.g., /admin/collections/blog
     label: "Texts" # Used in the UI
     folder: "src/texts" # The path to the folder where the documents are stored
-    filter: {field: "layout", value: "texts"}
+    filter: {field: "layout", value: "text"}
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "texts"}
-      - {label: "Tags", name: "tags", widget: "hidden", default: "texts"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "text"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "text"}
       - {label: "Content", name: "body", widget: "markdown"}
       - {label: "Description", name: "description", widget: "text", required: false}
   - label: "Pages"

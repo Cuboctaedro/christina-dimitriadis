@@ -1,8 +1,11 @@
 {% extends "./base.njk" %}
 
-{% block content %}
-<main class="">
-    <img src="{{ cover }}" />
+{% block header %}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endblock %}
 
+{% block content %}
+<main class="w-full block lg:absolute lg:top-0 lg:z-0">
+    <img src="{{ cover }}" class="w-full block" />
 </main>
 {% endblock %}

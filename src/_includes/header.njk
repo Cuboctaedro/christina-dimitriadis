@@ -1,25 +1,22 @@
-<nav class="w-full flex flex-col sm:flex-row justify-between container mx-auto py-2 px-3">
+<nav class="w-full flex flex-col sm:flex-row justify-between container mx-auto py-2 px-3 relative lg:z-10">
     {% if layout == 'home' %}
-        <h1 class="text-gray-600 uppercase">Christina Dimitriadis</h1>
+        <h1 class="text-gray-800 uppercase">Christina Dimitriadis</h1>
     {% else %}
-        <a class="text-gray-600 hover:text-black no-underline uppercase" href="/">Christina Dimitriadis</a>
+        <a class="text-gray-800 hover:text-black no-underline uppercase" href="/">Christina Dimitriadis</a>
     {% endif %}
-    {# <button class="block md:hidden w-6 h-6" aria-expanded="false" aria-controls="nav-menu">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-    </button> #}
     <ul class="flex md:flex-row uppercase" id="nav-menu" aria-hidden="true">
 
         <li class="pr-3">
-            <a href="/works" class="text-gray-600 hover:text-black no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
+            <a href="/works" class="text-gray-800 hover:text-black no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
         </li>
         <li class="pr-3">
-            <a href="/texts" class="text-gray-600 hover:text-black no-underline">Texts</a>
+            <a href="/texts" class="text-gray-800 hover:text-black no-underline">Texts</a>
         </li>
         <li class="pr-3">
-            <a href="/bio" class="text-gray-600 hover:text-black no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
+            <a href="/bio" class="text-gray-800 hover:text-black no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
         </li>
         <li class="">
-            <a href="/contact" class="text-gray-600 hover:text-black no-underline {% if title == 'Contact'%} font-bold {% endif %}">Contact</a>
+            <a href="/contact" class="text-gray-800 hover:text-black no-underline {% if title == 'Contact'%} font-bold {% endif %}">Contact</a>
         </li>
 
     </ul>

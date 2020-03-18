@@ -1,8 +1,8 @@
 ---
 title: Familie Ende
 author: Anne Haun
-layout: texts
-tags: texts
+layout: text
+tags: text
 ---
 2006 – 2007
 
