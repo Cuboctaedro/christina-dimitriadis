@@ -1,22 +1,31 @@
-<nav class="w-full flex flex-col sm:flex-row justify-between container mx-auto py-2 px-3 relative lg:z-10">
-    {% if layout == 'home' %}
-        <h1 class="text-gray-800 uppercase">Christina Dimitriadis</h1>
-    {% else %}
-        <a class="text-gray-800 hover:text-black no-underline uppercase" href="/">Christina Dimitriadis</a>
-    {% endif %}
-    <ul class="flex md:flex-row uppercase" id="nav-menu" aria-hidden="true">
+{% if layout == 'home' %}
+    {% set color = 'text-black hover:text-gray-700' %}
+    {% set background = 'bg-white' %}
+{% else %}
+    {% set background = 'bg-white' %}
+    {% set color = 'text-black hover:text-gray-700' %}
+    {# {% set color = 'text-black hover:text-gray-800' %} #}
+{% endif %}
 
-        <li class="pr-3">
-            <a href="/works" class="text-gray-800 hover:text-black no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
+<nav class="opacity-50 w-full flex flex-col sm:flex-row justify-between {{background}} mx-auto py-2 px-3 relative z-10 text-base sm:text-lg md:text-xl  ">
+    {% if layout == 'home' %}
+        <h1 class="{{color}}  mb-6 sm:mb-0">Christina Dimitriadis</h1>
+    {% else %}
+        <a class="{{color}} no-underline  mb-6 sm:mb-0" href="/">Christina Dimitriadis</a>
+    {% endif %}
+    <ul class="flex flex-col md:flex-row  sm:text-right" id="nav-menu" aria-hidden="true">
+
+        <li class="md:pr-3">
+            <a href="/works" class="{{color}} no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
         </li>
-        <li class="pr-3">
-            <a href="/texts" class="text-gray-800 hover:text-black no-underline">Texts</a>
+        <li class="md:pr-3">
+            <a href="/texts" class="{{color}} no-underline">Texts</a>
         </li>
-        <li class="pr-3">
-            <a href="/bio" class="text-gray-800 hover:text-black no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
+        <li class="md:pr-3">
+            <a href="/bio" class="{{color}} no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
         </li>
         <li class="">
-            <a href="/contact" class="text-gray-800 hover:text-black no-underline {% if title == 'Contact'%} font-bold {% endif %}">Contact</a>
+            <a href="/contact" class="{{color}} no-underline {% if title == 'Contact'%} font-bold {% endif %}">Contact</a>
         </li>
 
     </ul>

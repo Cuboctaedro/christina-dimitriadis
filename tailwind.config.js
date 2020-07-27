@@ -149,7 +149,7 @@ module.exports = {
 		},
 		fontFamily: {
 			sans: [
-				"Inter",
+				"'Source Sans Pro'",
 				"Roboto",
 				'"Helvetica Neue"',
 				"Arial",

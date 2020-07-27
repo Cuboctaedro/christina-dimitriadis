@@ -7,21 +7,23 @@
 {% endblock %}
 
 {% block content %}
-    <main class="container mx-auto px-3 mt-12">
-        <article class=" w-full flex flex-col md:flex-row">
-            <header class="mb-6 w-full md:w-1/2 lg:w-2/3">
+<div class="fixed inset-0 bg-center bg-cover flex items-center justify-center" style="background-image:url('/{{ cover }}');">
+    <main class="px-3 w-full sm:px-4 sm:w-1/2 md:px-6 lg:px-8 lg:w-1/3 xl:w-1/4 bg-white py-6">
+        <article class=" text-center ">
+            <header class="mb-6">
                 <h1 class="text-black uppercase font-bold">{{ title }}</h1>
                 <p class="mb-0">{{ year }}</p>
             </header>
-            <div class="w-full md:w-1/2 lg:w-1/3">
-                <img class="project__img cursor-pointer" src="/{{ cover }}" id="pswp-button" data-gallery='{{ gallery | galleryData }}' />
+            <div class="w-full ">
+                {# <img class="project__img cursor-pointer" src="/{{ cover }}" id="pswp-button" data-gallery='{{ gallery | galleryData }}' /> #}
                 <p class="mb-0">{{ place }}</p>
                 <p class="mb-0">Medium: {{ medium }}</p>
-                <p class="mb-0">Size: {{ size }}</p>
-
+                <p class="mb-6">Size: {{ size }}</p>
+                <a class="uppercase tracking-wider cursor-pointer hover:text-gray-600" id="pswp-button" data-gallery='{{ gallery | galleryData }}' >View images</a>
             </div>
         </article>
     </main>
+</div>
 {% endblock %}
 
 {% block footer %}
