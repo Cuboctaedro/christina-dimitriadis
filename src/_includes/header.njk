@@ -7,8 +7,10 @@
     {# {% set color = 'text-black hover:text-gray-800' %} #}
 {% endif %}
 
-<nav class="opacity-50 w-full flex flex-col sm:flex-row justify-between {{background}} mx-auto py-2 px-3 relative z-10 text-base sm:text-lg md:text-xl  ">
-    {% if layout == 'home' %}
+<nav {% if layout != 'home' %} style="background-color:rgba(255,255,255,.3)" {% endif %}
+ class=" w-full  py-2 px-3 relative z-10 text-base sm:text-lg md:text-xl  ">
+    <div class="flex flex-col sm:flex-row justify-between mx-auto container">
+        {% if layout == 'home' %}
         <h1 class="{{color}}  mb-6 sm:mb-0">Christina Dimitriadis</h1>
     {% else %}
         <a class="{{color}} no-underline  mb-6 sm:mb-0" href="/">Christina Dimitriadis</a>
@@ -19,7 +21,7 @@
             <a href="/works" class="{{color}} no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
         </li>
         <li class="md:pr-3">
-            <a href="/texts" class="{{color}} no-underline">Texts</a>
+            <a href="/texts" class="{{color}} no-underline {% if title == 'Texts'%} font-bold {% endif %}">Texts</a>
         </li>
         <li class="md:pr-3">
             <a href="/bio" class="{{color}} no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
@@ -29,4 +31,6 @@
         </li>
 
     </ul>
+
+    </div>
 </nav>
