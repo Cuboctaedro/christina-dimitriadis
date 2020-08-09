@@ -16,15 +16,15 @@ module.exports = {
 			white: "#fff",
 
 			gray: {
-				100: "#f7fafc",
-				200: "#edf2f7",
-				300: "#e2e8f0",
-				400: "#cbd5e0",
-				500: "#a0aec0",
-				600: "#718096",
-				700: "#4a5568",
-				800: "#2d3748",
-				900: "#1a202c"
+				100: "#e2e2e2",
+				200: "#c6c6c6",
+				300: "#ababab",
+				400: "#919191",
+				500: "#777777",
+				600: "#5e5e5e",
+				700: "#474747",
+				800: "#303030",
+				900: "#1b1b1b"
 			},
 			red: {
 				100: "#fff5f5",
@@ -149,7 +149,8 @@ module.exports = {
 		},
 		fontFamily: {
 			sans: [
-				"'Source Sans Pro'",
+				"'Work Sans'",
+				'"Times New Roman"',
 				"Roboto",
 				'"Helvetica Neue"',
 				"Arial",

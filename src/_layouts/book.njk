@@ -1,0 +1,50 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+<main class="container mx-auto mt-12 ">
+    <section class="flex flex-row flex-wrap">
+        <div class="w-full md:w-1/2 px-3 mb-6">
+            <h1 class="font-bold text-base sm:text-lg uppercase mb-6">{{ title }}</h1>
+            {% if(texts) %}
+            <div class="pb-1">
+                <span class="uppercase">Texts: </span>{{texts}}
+            </div>
+            {% endif %}
+            {% if(language) %}
+            <div class="pb-1">
+                <span class="uppercase">Language: </span>{{language}}
+            </div>
+            {% endif %}
+            {% if(editor) %}
+            <div class="pb-1">
+                <span class="uppercase">Editor: </span>{{editor}}
+            </div>
+            {% endif %}
+            {% if(design) %}
+            <div class="pb-1">
+                <span class="uppercase">Design: </span>{{design}}
+            </div>
+            {% endif %}
+            {% if(publisher) %}
+            <div class="pb-1">
+                <span class="uppercase">Publisher: </span>{{publisher}}
+            </div>
+            {% endif %}
+            {% if(description) %}
+            <div class="pb-1">
+                {{description}}
+            </div>
+            {% endif %}            
+            {% if(isbn) %}
+            <div class="pb-1">
+                {{isbn}}
+            </div>
+            {% endif %}
+        </div>
+        <div class="w-full md:w-1/2 px-3 mb-6">
+            <img src="/{{ cover }}" class="block w-full h-auto" />
+        </div>
+    </section>
+    
+</main>
+{% endblock %}

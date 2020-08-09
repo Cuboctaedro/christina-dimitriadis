@@ -51,6 +51,12 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    eleventyConfig.addCollection("booksSorted", function(collection) {
+        return collection.getFilteredByTag("book").sort(function(a, b) {
+            return b.data.order - a.data.order;
+        });
+    });
+    
     return {
         dir: {
             input: "src/",

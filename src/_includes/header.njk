@@ -8,29 +8,30 @@
 {% endif %}
 
 <nav {% if layout != 'home' %} style="background-color:rgba(255,255,255,.3)" {% endif %}
- class=" w-full  py-2 px-3 relative z-10 text-base sm:text-lg md:text-xl  ">
-    <div class="flex flex-col sm:flex-row justify-between mx-auto container">
+ class="w-full py-2 relative z-10 uppercase text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-normal md:font-thin">
+    <div class="flex flex-row justify-between mx-auto container">
         {% if layout == 'home' %}
-        <h1 class="{{color}}  mb-6 sm:mb-0">Christina Dimitriadis</h1>
+        <h1 class="{{color}} w-1/2 px-3 mb-6 sm:mb-0">Christina Dimitriadis</h1>
     {% else %}
-        <a class="{{color}} no-underline  mb-6 sm:mb-0" href="/">Christina Dimitriadis</a>
+        <a class="{{color}} w-1/2 px-3 no-underline  mb-6 sm:mb-0" href="/">Christina Dimitriadis</a>
     {% endif %}
-    <ul class="flex flex-col md:flex-row  sm:text-right" id="nav-menu" aria-hidden="true">
+        <ul class="flex flex-col md:flex-row justify-end w-1/2 px-3 text-right" id="nav-menu" aria-hidden="true">
 
-        <li class="md:pr-3">
-            <a href="/works" class="{{color}} no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
-        </li>
-        <li class="md:pr-3">
-            <a href="/texts" class="{{color}} no-underline {% if title == 'Texts'%} font-bold {% endif %}">Texts</a>
-        </li>
-        <li class="md:pr-3">
-            <a href="/bio" class="{{color}} no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
-        </li>
-        <li class="">
-            <a href="/contact" class="{{color}} no-underline {% if title == 'Contact'%} font-bold {% endif %}">Contact</a>
-        </li>
-
-    </ul>
-
+            <li class="md:pr-3">
+                <a href="/works" class="{{color}} no-underline {% if title == 'Works'%} font-bold {% endif %} {% if layout == 'work'%} font-bold {% endif %}">Works</a>
+            </li>
+            <li class="md:pr-3">
+                <a href="/books" class="{{color}} no-underline {% if title == 'Books'%} font-bold {% endif %} {% if layout == 'book'%} font-bold {% endif %}">Books</a>
+            </li>
+            <li class="md:pr-3">
+                <a href="/texts" class="{{color}} no-underline {% if title == 'Texts'%} font-bold {% endif %} {% if layout == 'text'%} font-bold {% endif %}">Texts</a>
+            </li>
+            <li class="md:pr-3">
+                <a href="/bio" class="{{color}} no-underline {% if title == 'Bio'%} font-bold {% endif %}">Bio</a>
+            </li>
+            <li class="">
+                <a href="/contact" class="{{color}} no-underline {% if title == 'Contact'%} font-bold {% endif %}">Contact</a>
+            </li>
+        </ul>
     </div>
 </nav>
