@@ -3,6 +3,7 @@ title: Christina Dimitriadis / Technologies of the Self
 author: Barbara Piwowarska
 layout: text
 tags: text
+order: 5
 ---
 Galeria Studio / Teatr Studio, Pl. Defilad 1, Warsaw
 

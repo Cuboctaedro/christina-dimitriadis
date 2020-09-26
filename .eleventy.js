@@ -56,7 +56,12 @@ module.exports = function (eleventyConfig) {
             return b.data.order - a.data.order;
         });
     });
-    
+
+    eleventyConfig.addCollection("textsSorted", function(collection) {
+        return collection.getFilteredByTag("text").sort(function(a, b) {
+            return b.data.order - a.data.order;
+        });
+    });    
     return {
         dir: {
             input: "src/",

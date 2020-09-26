@@ -24,8 +24,11 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
       - {label: "Tags", name: "tags", widget: "hidden", default: "work"}
-      - {label: "Cover", name: "cover", widget: "image", media_library:{config:{multiple: false}}, required: false}
-      - {label: "Gallery", name: "gallery", widget: "list", field:{label: "Image", name: "image", widget: "image", media_library:{config:{multiple: false}}}}
+      - {label: "Cover", name: "cover", widget: "image",allow_multiple: false, required: false}
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        field: {label: "Image", name: "image", widget: image}
       - {label: "Description", name: "description", widget: "text", required: false}
   - name: "texts" # Used in routes, e.g., /admin/collections/blog
     label: "Texts" # Used in the UI
