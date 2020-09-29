@@ -5,7 +5,7 @@
         <div class="container mx-auto  mt-12 px-3">
             <ul class=" w-full relative">
                 {% for item in collections.workSorted %}
-                    <li class="mb-6 w-full">
+                    <li class="mb-6 w-full relative">
                         <a class="project text-black hover:text-gray-600 no-underline text-base sm:text-lg " href="{{ item.url }}">
                             <h2 class="font-normal leading-none lg:w-2/3">{{ item.data.title }}</h2>
                             <p class="font-bold text-black lg:w-2/3">{{ item.data.year }}</p>
