@@ -19,7 +19,7 @@
     "del-cli": "^3.0.0",
     "html-minifier": "^4.0.0",
     "js-yaml": "^3.13.1",
-    "luxon": "^1.21.3",
+    "luxon": "^1.28.1",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
